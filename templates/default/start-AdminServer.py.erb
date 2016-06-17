@@ -1,0 +1,2 @@
+print 'STARTING <%= node['weblogic-domain-lifecycle']['domain_name'] %> AdminServer';
+startServer('AdminServer','mydomain','t3://localhost:7001','<%= node['weblogic-domain-lifecycle']['wlsuser'] %>','<%= node['weblogic-domain-lifecycle']['password'] %>','<%= node['weblogic-domain-lifecycle']['domain_base'] %>/<%= node['weblogic-domain-lifecycle']['domain_name'] %>','<%= node['weblogic-domain-lifecycle']['block'] %>',<%= node['weblogic-domain-lifecycle']['timeout'] %>,'<%= node['weblogic-domain-lifecycle']['server_log'] %>')
