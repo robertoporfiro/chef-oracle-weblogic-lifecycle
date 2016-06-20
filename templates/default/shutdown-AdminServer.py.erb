@@ -1,5 +1,3 @@
-wlsUserID = java.lang.System.getenv('wlsUserID')
-wlsPassword = java.lang.System.getenv('wlsPassword')
-connect(  url='t3://oel72:7001', adminServerName='AdminServer')
-shutdown('AdminServer','Server', ignoreSessions='true')
+connect( '<%= node['weblogic-domain-lifecycle']['wlsuser'] %>', '<%= node['weblogic-domain-lifecycle']['password'] %>', '<%= node['weblogic-domain-lifecycle']['admin_server_url'] %>' )
+shutdown('<%= node['weblogic-domain-lifecycle']['admin_server_name'] %>','Server', ignoreSessions='true' )
 exit()

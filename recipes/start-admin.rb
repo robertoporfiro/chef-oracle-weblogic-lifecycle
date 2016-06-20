@@ -27,7 +27,7 @@ execute "wlst.sh start_#{node['weblogic-domain-lifecycle']['domain_name']}_Admin
   user node['weblogic-domain-lifecycle']['user']
   group node['weblogic-domain-lifecycle']['group']
   action :run
-  creates "#{node['weblogic-domain-lifecycle']['domain_base']}/#{node['weblogic-domain-lifecycle']['domain_name']}/default_server.lok"
+  creates "#{node['weblogic-domain-lifecycle']['domain_base']}/#{node['weblogic-domain-lifecycle']['domain_name']}/servers/AdminServer/tmp/AdminServer.lok"
 end
 
 # log  "####{cookbook_name}::#{recipe_name} #{Time.now.inspect}: Finished execution phase"
